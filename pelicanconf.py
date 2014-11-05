@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'cristian'
 SITENAME = u'IDisposable Thoughts'
 SITEURL = ''
-SITESUBTITLE = u'Where is my coding t-shirt?'
+SITESUBTITLE = u"Where's my coding t-shirt?"
 EMAIL = u'me@cprieto.com'
 
 THEME = u'themes/less'
