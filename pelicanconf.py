@@ -1,6 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import md5
+
+# Jinja2 filter for generate md5 checksum
+def md5filter(value):
+    v = md5.new()
+    v.update(value)
+    return v.hexdigest()
 
 AUTHOR = u'cristian'
 SITENAME = u'IDisposable Thoughts'
