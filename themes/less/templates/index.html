@@ -35,7 +35,7 @@
 	<div class="container">
 		<div class="gravatar">
 			{% if EMAIL %}
-			<img alt='' src='http://gravatar.com/avatar/8e77a632d83ecb3d45100590eae6ee06?s=100&amp;d=retro&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />		</div><!--/ author -->
+			<img alt='' src='http://gravatar.com/avatar/{{ EMAIL|md5 }}?s=100&amp;d=retro&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />		</div><!--/ author -->
 			{% endif %}
 		<div id="brand">
 			<h1 class="site-title"><a href="{{ SITEURL }}" title="{{ SITENAME }}" rel="home">{{ SITENAME }}</a> {% if SITESUBTITLE %}&mdash; <span>{{ SITESUBTITLE }}</span>{% endif %}</h1>

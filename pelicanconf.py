@@ -9,6 +9,8 @@ def md5filter(value):
     v.update(value)
     return v.hexdigest()
 
+JINJA_FILTERS = {'md5': md5filter}
+
 AUTHOR = u'cristian'
 SITENAME = u'IDisposable Thoughts'
 SITEURL = ''
