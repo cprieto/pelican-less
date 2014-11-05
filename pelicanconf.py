@@ -6,6 +6,7 @@ AUTHOR = u'cristian'
 SITENAME = u'IDisposable Thoughts'
 SITEURL = ''
 SITESUBTITLE = u'Where is my coding t-shirt?'
+EMAIL = u'me@cprieto.com'
 
 THEME = u'themes/less'
 
