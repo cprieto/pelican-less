@@ -5,6 +5,9 @@ from __future__ import unicode_literals
 AUTHOR = u'cristian'
 SITENAME = u'IDisposable Thoughts'
 SITEURL = ''
+SITESUBTITLE = u'Where is my coding t-shirt?'
+
+THEME = u'themes/less'
 
 PATH = 'content'
 
