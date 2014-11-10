@@ -5,7 +5,7 @@
     <article class="post">
 
         <h1 class="title">
-            <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title|striptags }}">{{ article.title }}</a>
+            <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title|striptags }}" role="bookmark">{{ article.title }}</a>
         </h1>
         <div class="post-meta">
 
@@ -13,12 +13,12 @@
 
         <div class="the-content">
         {{ article.summary }}
-        <p><a href="http://lessmade.com/themes/less/focus-on-the-content/#more-78" class="more-link">Read more&#8230;</a></p>
+        <p><a href="{{ SITEURL }}/{{ article.url }}" title="Read more about {{ article.title|striptags }}" class="more-link">Read more&#8230;</a></p>
         </div><!-- the-content -->
 
         <div class="meta clearfix">
             <div class="category"><ul class="post-categories">
-<li><a href="http://lessmade.com/themes/less/category/writing/" title="View all posts in writing" rel="category tag">writing</a></li></ul></div>
+<li><a href="http://lessmade.com/themes/less/category/writing/" title="View all posts in writing" rel="category tag">{{ article.category }}</a></li></ul></div>
             <div class="tags"></div>
         </div><!-- Meta -->
 
