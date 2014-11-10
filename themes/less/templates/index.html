@@ -1,20 +1,19 @@
 {%  extends "base.html" %}
 {% block content %}
 {%  if articles %}
-    {% for article in articles %}
+    {% for article in articles_page.object_list  %}
     <article class="post">
 
         <h1 class="title">
-            <a href="http://lessmade.com/themes/less/focus-on-the-content/" title="Focus on the content">{{ article.title }}</a>
+            <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title|striptags }}">{{ article.title }}</a>
         </h1>
         <div class="post-meta">
 
         </div><!--/post-meta -->
 
         <div class="the-content">
-        {{ article.content }}
-            <p><a href="http://lessmade.com/themes/less/focus-on-the-content/#more-78" class="more-link">Continue&#8230;</a></p>
-
+        {{ article.summary }}
+        <p><a href="http://lessmade.com/themes/less/focus-on-the-content/#more-78" class="more-link">Read more&#8230;</a></p>
         </div><!-- the-content -->
 
         <div class="meta clearfix">
