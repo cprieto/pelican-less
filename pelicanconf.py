@@ -10,6 +10,8 @@ def md5filter(value):
     return v.hexdigest()
 
 JINJA_FILTERS = {'md5': md5filter}
+DISPLAY_CATEGORIES_ON_MENU = False
+TYPOGRIFY = False
 
 AUTHOR = u'cristian'
 SITENAME = u'IDisposable Thoughts'
@@ -18,6 +20,11 @@ SITESUBTITLE = u"Where's my coding t-shirt?"
 EMAIL = u'me@cprieto.com'
 
 THEME = u'themes/less'
+# THEME = u'themes/zurb-F5-basic'
+# THEME = u'themes/pelican-cait' # <-- this one looks pretty good!
+# THEME = u'themes/nikhil-theme'
+# THEME = u'themes/pelican-simplegrey'
+# THEME = u'themes/gum'
 
 PATH = 'content'
 
