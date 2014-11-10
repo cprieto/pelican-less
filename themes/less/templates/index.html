@@ -1,247 +1,34 @@
-<html lang="en-US">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width" />
-<title>{{ SITENAME }}</title>
+{%  extends "base.html" %}
+{% block content %}
+{%  if articles %}
+    {% for article in articles %}
+    <article class="post">
 
-<link rel="profile" href="http://gmpg.org/xfn/11" />
+        <h1 class="title">
+            <a href="http://lessmade.com/themes/less/focus-on-the-content/" title="Focus on the content">{{ article.title }}</a>
+        </h1>
+        <div class="post-meta">
 
-{%if FEED_ALL_RSS %}
-<link rel="alternate" type="application/rss+xml" title="{{ SITENAME }} RSS Feed" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" />
+        </div><!--/post-meta -->
+
+        <div class="the-content">
+        {{ article.content }}
+            <p><a href="http://lessmade.com/themes/less/focus-on-the-content/#more-78" class="more-link">Continue&#8230;</a></p>
+
+        </div><!-- the-content -->
+
+        <div class="meta clearfix">
+            <div class="category"><ul class="post-categories">
+<li><a href="http://lessmade.com/themes/less/category/writing/" title="View all posts in writing" rel="category tag">writing</a></li></ul></div>
+            <div class="tags"></div>
+        </div><!-- Meta -->
+
+    </article>
+    {% endfor %}
+    <!-- pagintation -->
+    <div id="pagination" class="clearfix">
+        <div class="past-page"></div>
+        <div class="next-page"><a href="http://lessmade.com/themes/less/page/2/" > &laquo; Older</a></div>
+    </div><!-- pagination -->
 {% endif %}
-{%if FEED_ALL_ATOM %}
-<link rel="alternate" type="application/rss+xml" title="{{ SITENAME }} Atom Feed" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" />
-{% endif %}
-
-<link rel='stylesheet' id='less-style-css'  href='{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/less.css' type='text/css' media='all' />
-    
-<script type='text/javascript' src='http://lessmade.com/themes/less/wp-includes/js/jquery/jquery.js?ver=1.8.3'></script>
-
-<meta name="generator" content="Pelican" />
-
-<!-- Jetpack Open Graph Tags -->
-<meta property="og:type" content="blog" />
-<meta property="og:title" content="{{ SITENAME }}" />
-{% if SITEDESCRIPTION %}
-<meta property="og:description" content="{{ SITEDESCRIPTION }}" />
-{% endif %}
-<meta property="og:url" content="{{ SITEURL }}" />
-<meta property="og:site_name" content="{{ SITENAME }}" />
-
-</head>
-
-<body class="home blog">
-<header id="masthead" class="site-header" role="banner">
-	<div class="container">
-		<div class="gravatar">
-			{% if EMAIL %}
-			<img alt='' src='http://gravatar.com/avatar/{{ EMAIL|md5 }}?s=100&amp;d=retro&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />		</div><!--/ author -->
-			{% endif %}
-		<div id="brand">
-			<h1 class="site-title"><a href="{{ SITEURL }}" title="{{ SITENAME }}" rel="home">{{ SITENAME }}</a> {% if SITESUBTITLE %}&mdash; <span>{{ SITESUBTITLE }}</span>{% endif %}</h1>
-		</div><!-- /brand -->
-	
-		<nav role="navigation" class="site-navigation main-navigation">
-			<div class="menu-main-nav-container">
-				<ul id="menu-main-nav" class="menu">
-					<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://lessmade.com/themes/less/category/design/">About</a></li>
-				</ul>
-			</div>
-		</nav><!-- .site-navigation .main-navigation -->
-		
-		<div class="clear"></div>
-	</div><!--/container -->
-		
-</header><!-- #masthead .site-header -->
-
-<div class="container">
-
-	<div id="primary">
-		<div id="content" role="main">
-					<article class="post">
-					
-						<h1 class="title">
-							<a href="http://lessmade.com/themes/less/focus-on-the-content/" title="Focus on the content">
-								Focus on the content							</a>
-						</h1>
-						<div class="post-meta">
-													
-						</div><!--/post-meta -->
-						
-						<div class="the-content">
-							<p><strong>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr</strong></p>
-<p>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.</p>
-<p> <a href="http://lessmade.com/themes/less/focus-on-the-content/#more-78" class="more-link">Continue&#8230;</a></p>
-							
-													</div><!-- the-content -->
-						
-						<div class="meta clearfix">
-							<div class="category"><ul class="post-categories">
-	<li><a href="http://lessmade.com/themes/less/category/writing/" title="View all posts in writing" rel="category tag">writing</a></li></ul></div>
-							<div class="tags"></div>
-						</div><!-- Meta -->
-						
-					</article>
-
-				
-					<article class="post">
-					
-						<h1 class="title">
-							<a href="http://lessmade.com/themes/less/all-about-typography/" title="All about typography">
-								All about typography							</a>
-						</h1>
-						<div class="post-meta">
-													
-						</div><!--/post-meta -->
-						
-						<div class="the-content">
-							<p style="text-align: center;"><img class="aligncenter  wp-image-75" alt="6_liberty-forever-hand-drawn-typography-type-sketch-drawing" src="http://lessmade.com/themes/less/files/2012/12/6_liberty-forever-hand-drawn-typography-type-sketch-drawing.jpeg" width="800" height="800" /></p>
-<p style="text-align: left;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-							
-													</div><!-- the-content -->
-						
-						<div class="meta clearfix">
-							<div class="category"><ul class="post-categories">
-	<li><a href="http://lessmade.com/themes/less/category/design/" title="View all posts in design" rel="category tag">design</a></li></ul></div>
-							<div class="tags"></div>
-						</div><!-- Meta -->
-						
-					</article>
-
-				
-					<article class="post">
-					
-						<h1 class="title">
-							<a href="http://lessmade.com/themes/less/clean-office/" title="Clean office">
-								Clean office							</a>
-						</h1>
-						<div class="post-meta">
-													
-						</div><!--/post-meta -->
-						
-						<div class="the-content">
-							<p><img class="aligncenter size-full wp-image-71" alt="14_huge-all-white-minimal-livingroom-office-space" src="http://lessmade.com/themes/less/files/2012/12/14_huge-all-white-minimal-livingroom-office-space1.jpeg" width="484" height="488" /></p>
-<p>Super clean all white living room</p>
-							
-													</div><!-- the-content -->
-						
-						<div class="meta clearfix">
-							<div class="category"><ul class="post-categories">
-	<li><a href="http://lessmade.com/themes/less/category/design/" title="View all posts in design" rel="category tag">design</a></li></ul></div>
-							<div class="tags"></div>
-						</div><!-- Meta -->
-						
-					</article>
-
-				
-					<article class="post">
-					
-						<h1 class="title">
-							<a href="http://lessmade.com/themes/less/soundcloud-for-your-earholes/" title="Soundcloud for your earholes">
-								Soundcloud for your earholes							</a>
-						</h1>
-						<div class="post-meta">
-													
-						</div><!--/post-meta -->
-						
-						<div class="the-content">
-							<p><iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F72334630&amp;color=c3c3c3&amp;auto_play=false&amp;show_artwork=true"></iframe></p>
-<p>Great tune by <a title="Soundcloud" href="https://soundcloud.com/tylerfinck">Tyler Finck</a></p>
-							
-													</div><!-- the-content -->
-						
-						<div class="meta clearfix">
-							<div class="category"><ul class="post-categories">
-	<li><a href="http://lessmade.com/themes/less/category/music/" title="View all posts in music" rel="category tag">music</a></li></ul></div>
-							<div class="tags"></div>
-						</div><!-- Meta -->
-						
-					</article>
-
-				
-					<article class="post">
-					
-						<h1 class="title">
-							<a href="http://lessmade.com/themes/less/things-that-go-vrooom/" title="Things that go vrooom">
-								Things that go vrooom							</a>
-						</h1>
-						<div class="post-meta">
-													
-						</div><!--/post-meta -->
-						
-						<div class="the-content">
-							<p><img class="aligncenter size-full wp-image-43" alt="Orange_mecanique_1" src="http://lessmade.com/themes/less/files/2012/12/Orange_mecanique_1.jpeg" width="854" height="476" /></p>
-<p><img class="aligncenter size-full wp-image-45" alt="SR500_Laurence_7" src="http://lessmade.com/themes/less/files/2012/12/SR500_Laurence_7.jpeg" width="854" height="476" /> </p>
-<p><img class="aligncenter size-full wp-image-47" alt="Blitz_TW_Zero_1" src="http://lessmade.com/themes/less/files/2012/12/Blitz_TW_Zero_1.jpeg" width="854" height="476" /></p>
-<p>Beautiful bikes by <a href="http://blitz-motorcycles.com/" target="_blank">Blits Motorcycles </a></p>
-							
-													</div><!-- the-content -->
-						
-						<div class="meta clearfix">
-							<div class="category"><ul class="post-categories">
-	<li><a href="http://lessmade.com/themes/less/category/motorcycles/" title="View all posts in Motorcycles" rel="category tag">Motorcycles</a></li></ul></div>
-							<div class="tags"></div>
-						</div><!-- Meta -->
-						
-					</article>
-
-				
-					<article class="post">
-					
-						<h1 class="title">
-							<a href="http://lessmade.com/themes/less/graphic-designers-and-wordpress-and-how-this-is-a-really-long-title-to-see-how-it-wraps/" title="Graphic designers and WordPress and how This is a really long title to see how it wraps">
-								Graphic designers and WordPress and how This is a really long title to see how it wraps							</a>
-						</h1>
-						<div class="post-meta">
-													
-						</div><!--/post-meta -->
-						
-						<div class="the-content">
-							<p><a href="http://jarederickson.com/2012/friday-inspiration-117/" target="_blank"><img class="aligncenter size-full wp-image-9" alt="sketch design typography" src="http://lessmade.com/themes/less/files/2012/12/4111659.jpeg" width="599" height="382" /></a></p>
-<p>&nbsp;</p>
-<p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
-							
-													</div><!-- the-content -->
-						
-						<div class="meta clearfix">
-							<div class="category"><ul class="post-categories">
-	<li><a href="http://lessmade.com/themes/less/category/design/" title="View all posts in design" rel="category tag">design</a></li></ul></div>
-							<div class="tags"></div>
-						</div><!-- Meta -->
-						
-					</article>
-
-								
-				<!-- pagintation -->
-				<div id="pagination" class="clearfix">
-					<div class="past-page"></div>
-					<div class="next-page"><a href="http://lessmade.com/themes/less/page/2/" > &laquo; Older</a></div>
-				</div><!-- pagination -->
-
-
-			
-		
-	
-	
-
-		</div><!-- #content .site-content -->
-	</div><!-- #primary .content-area -->
-
-</div><!-- / container-->
-
-
-<footer class="site-footer" role="contentinfo">
-	<div class="site-info container">
-				<a href="http://blog.getpelican.com/" title="Static Site Generator, Powered by Python" rel="generator">Proudly powered by Pelican</a>
-		<span class="sep"> and </span>
-		<a href="http://lessmade.com/themes/less" rel="theme">LESS</a> by <a href="http://jarederickson.com" rel="designer">Jared Erickson</a>
-	</div><!-- .site-info -->
-</footer><!-- #colophon .site-footer -->
-
-<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201444'></script>
-<script type='text/javascript' src='http://lessmade.com/themes/less/wp-content/themes/Less/js/jquery.fitvids.js?ver=1.1'></script>
-<script type='text/javascript' src='http://lessmade.com/themes/less/wp-content/themes/Less/js/theme.min.js?ver=1.1'></script>
-
-</body>
-</html>
+{% endblock %}

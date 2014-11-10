@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-import md5
+import hashlib
 
 # Jinja2 filter for generate md5 checksum
 def md5filter(value):
-    v = md5.new()
+    v = hashlib.md5()
     v.update(value)
     return v.hexdigest()
 
