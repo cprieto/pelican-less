@@ -26,13 +26,14 @@
 <meta name="generator" content="Pelican" />
 
 <!-- Jetpack Open Graph Tags -->
+{% block metatags %}
 <meta property="og:type" content="blog" />
-<meta property="og:title" content="{{ SITENAME }}" />
 {% if SITEDESCRIPTION %}
 <meta property="og:description" content="{{ SITEDESCRIPTION }}" />
 {% endif %}
-<meta property="og:url" content="{{ SITEURL }}" />
 <meta property="og:site_name" content="{{ SITENAME }}" />
+<meta http-equiv="content-language" content="en">
+{% endblock %}
 
 </head>
 
