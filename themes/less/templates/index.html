@@ -17,17 +17,27 @@
         </div><!-- the-content -->
 
         <div class="meta clearfix">
-            <div class="category"><ul class="post-categories">
-<li><a href="{{ SITEURL }}/category/{{ article.category.name }}.html" title="View all posts in writing" rel="category tag">{{ article.category }}</a></li></ul></div>
+            <div class="category">
+                <ul class="post-categories">
+                    <li>
+                        <a href="{{ SITEURL }}/category/{{ article.category.name }}.html" title="View all posts in {{ article.category }}"
+                        rel="category tag">{{ article.category }}</a>
+                    </li>
+                </ul>
+            </div>
             <div class="tags"></div>
         </div><!-- Meta -->
-
     </article>
     {% endfor %}
+
     <!-- pagintation -->
     <div id="pagination" class="clearfix">
-        <div class="past-page"></div>
-        <div class="next-page"><a href="http://lessmade.com/themes/less/page/2/" > &laquo; Older</a></div>
+    {% if articles_page.has_previous() %}
+        <div class="past-page"><a href="{{ articles_previous_page.url }}">Newer &raquo;</a></div>
+    {% endif %}
+    {% if articles_page.has_next() %}
+        <div class="next-page"><a href="{{ articles_next_page.url }}" > &laquo; Older</a></div>
+    {% endif %}
     </div><!-- pagination -->
 {% endif %}
 {% endblock %}
