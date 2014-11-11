@@ -1,0 +1,28 @@
+{%  extends "base.html" %}
+{% block content %}
+    <article class="post">
+
+        <h1 class="title">
+            <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title|striptags }}" role="bookmark">{{ article.title }}</a>
+        </h1>
+        <div class="post-meta">
+
+        </div><!--/post-meta -->
+
+        <div class="the-content">
+        {{ article.content }}
+        </div><!-- the-content -->
+
+        <div class="meta clearfix">
+            <div class="category">
+                <ul class="post-categories">
+                    <li>
+                        <a href="{{ SITEURL }}/category/{{ article.category.name }}.html" title="View all posts in {{ article.category }}"
+                        rel="category tag">{{ article.category }}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tags"></div>
+        </div><!-- Meta -->
+    </article>
+{% endblock %}
