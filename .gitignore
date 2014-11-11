@@ -1,3 +1,6 @@
+*.pid
 *.pyc
 output/
 cache/
+content/
+.idea/
