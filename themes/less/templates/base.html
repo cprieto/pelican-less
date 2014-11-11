@@ -13,6 +13,14 @@
 <link rel="alternate" type="application/rss+xml" title="{{ SITENAME }} Atom Feed" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" />
 {% endif %}
 
+{% if 'ico' in FAVICON_TYPES %}
+<link rel="shortcut icon" href="favicon.png"/>
+{% endif %}
+{% if 'png' in FAVICON_TYPES %}
+<link rel="icon" type="image/png" href="{{ SITEURL }}/favicon.png"/>
+<link rel="icon" type="image/png" href="{{ SITEURL }}/favicon32.png" sizes="32x32"/>
+{% endif %}
+
 <link rel='stylesheet' id='less-style-css'  href='{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/less.css' type='text/css' media='all' />
 
 <meta name="generator" content="Pelican" />
@@ -36,7 +44,7 @@
 			<img alt='' src='http://gravatar.com/avatar/{{ EMAIL|md5 }}?s=100&amp;d=retro&amp;r=G' class='avatar avatar-100 photo' height='100' width='100' />		</div><!--/ author -->
 			{% endif %}
 		<div id="brand">
-			<h1 class="site-title"><a href="{{ SITEURL }}" title="{{ SITENAME }}" rel="home">{{ SITENAME }}</a> {% if SITESUBTITLE %}&mdash; <span>{{ SITESUBTITLE }}</span>{% endif %}</h1>
+			<h1 class="site-title"><a href="{{ SITEURL }}/" title="{{ SITENAME }}" rel="home">{{ SITENAME }}</a> {% if SITESUBTITLE %}&mdash; <span>{{ SITESUBTITLE }}</span>{% endif %}</h1>
 		</div><!-- /brand -->
 	
 		<nav role="navigation" class="site-navigation main-navigation">

@@ -20,11 +20,6 @@ SITESUBTITLE = u"Where's my coding t-shirt?"
 EMAIL = u'me@cprieto.com'
 
 THEME = u'themes/less'
-# THEME = u'themes/zurb-F5-basic'
-# THEME = u'themes/pelican-cait' # <-- this one looks pretty good!
-# THEME = u'themes/nikhil-theme'
-# THEME = u'themes/pelican-simplegrey'
-# THEME = u'themes/gum'
 
 PATH = 'content'
 
@@ -46,7 +41,9 @@ DEFAULT_PAGINATION = 5
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-STATIC_PATHS = ['extra', 'extra/favicon.ico']
+STATIC_PATHS = ['extra', 'extra/favicon.ico', 'extra/favicon.png']
 EXTRA_PATH_METADATA = {
-    'extra/favicon.ico': {'path': 'favicon.ico'}
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/favicon.png': {'path': 'favicon.png'}
 }
+FAVICON_TYPES = ['ico','png']
