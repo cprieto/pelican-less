@@ -24,7 +24,7 @@ THEME = u'themes/less'
 
 PATH = 'content'
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Australia/Melbourne'
 
 DEFAULT_LANG = u'en'
 
