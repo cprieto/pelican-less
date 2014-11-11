@@ -14,6 +14,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 TYPOGRIFY = False
 
 AUTHOR = u'cristian'
+AUTHOR_FULLNAME = u'Cristian Prieto'
 SITENAME = u'IDisposable Thoughts'
 SITEURL = ''
 SITESUBTITLE = u"Where's my coding t-shirt?"

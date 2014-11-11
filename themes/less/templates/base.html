@@ -24,15 +24,17 @@
 <link rel='stylesheet' id='less-style-css'  href='{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/less.css' type='text/css' media='all' />
 
 <meta name="generator" content="Pelican" />
-
-<!-- Jetpack Open Graph Tags -->
+{% if AUTHOR_FULLNAME %}
+<meta name="author" content="{{ AUTHOR_FULLNAME }}">
+<meta name="publisher" content="{{ AUTHOR_FULLNAME }}">
+<meta name="copyright" content="{{ AUTHOR_FULLNAME }}">
+{% endif %}
 {% block metatags %}
 <meta property="og:type" content="blog" />
 {% if SITEDESCRIPTION %}
 <meta property="og:description" content="{{ SITEDESCRIPTION }}" />
 {% endif %}
 <meta property="og:site_name" content="{{ SITENAME }}" />
-<meta http-equiv="content-language" content="en">
 {% endblock %}
 
 </head>
