@@ -11,7 +11,7 @@
             <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title|striptags }}" role="bookmark">{{ article.title }}</a>
         </h1>
         <div class="post-meta">
-
+           <time datetime="{{ article.date }}">{{ article.date|format_date }}</time>
         </div><!--/post-meta -->
 
         <div class="the-content">

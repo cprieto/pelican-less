@@ -9,7 +9,17 @@ def md5filter(value):
     v.update(value)
     return v.hexdigest()
 
-JINJA_FILTERS = {'md5': md5filter}
+def formatDate(value):
+    if 4 <= value.day <= 20 or 24 <= value.day <= 30:
+        suffix = "th"
+    else:
+        suffix = ["st", "nd", "rd"][value.day % 10 - 1]
+
+    format = str(value.day) + suffix + ' of %B %Y'
+
+    return value.strftime(format)
+
+JINJA_FILTERS = {'md5': md5filter, 'format_date': formatDate}
 DISPLAY_CATEGORIES_ON_MENU = False
 TYPOGRIFY = False
 
@@ -48,3 +58,8 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.png': {'path': 'favicon.png'}
 }
 FAVICON_TYPES = ['ico','png']
+
+DIRECT_TEMPLATES = ('index', 'categories', 'archives')
+
+ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{slug}.html'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{slug}.html'

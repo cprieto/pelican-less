@@ -21,7 +21,7 @@
 <link rel="icon" type="image/png" href="{{ SITEURL }}/favicon32.png" sizes="32x32"/>
 {% endif %}
 
-<link rel='stylesheet' id='less-style-css'  href='{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/less.css' type='text/css' media='all' />
+<link rel='stylesheet' id='less-style-css'  href='{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/less.min.css' type='text/css' media='all' />
 
 <meta name="generator" content="Pelican" />
 {% if AUTHOR_FULLNAME %}
@@ -53,12 +53,13 @@
 		<nav role="navigation" class="site-navigation main-navigation">
 			<div class="menu-main-nav-container">
 				<ul id="menu-main-nav" class="menu">
-					<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://lessmade.com/themes/less/category/design/">About</a></li>
+					<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="#/">About</a></li>
 				</ul>
 			</div>
 		</nav><!-- .site-navigation .main-navigation -->
 		
-		<div class="clear"></div>
+		<div class="clear">
+		</div>
 	</div><!--/container -->
 		
 </header><!-- #masthead .site-header -->
@@ -84,7 +85,7 @@
 
 <script type='text/javascript' src='<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>'></script>
 <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js'></script>
-<script type='text/javascript' src='http://lessmade.com/themes/less/wp-content/themes/Less/js/theme.min.js?ver=1.1'></script>
+<script type='text/javascript'>(function(e){"use strict";e(function(){e(".the-content").fitVids()})})(jQuery);</script>
 
 </body>
 </html>
