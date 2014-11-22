@@ -63,5 +63,3 @@ DIRECT_TEMPLATES = ('index', 'categories', 'archives')
 
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{slug}.html'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{slug}.html'
-
-DISQUS_SITENAME = 'cprieto'
